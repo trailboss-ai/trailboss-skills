@@ -1,0 +1,15 @@
+{
+  "name": "trailboss",
+  "description": "Skills that teach coding agents to drive Trailboss",
+  "owner": {
+    "name": "Trailboss",
+    "url": "https://github.com/trailboss-ai"
+  },
+  "plugins": [
+    {
+      "name": "trailboss",
+      "source": "./",
+      "description": "Skills for driving Trailboss, the fleet manager for coding agents"
+    }
+  ]
+}

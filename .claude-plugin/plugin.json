@@ -1,0 +1,12 @@
+{
+  "name": "trailboss",
+  "description": "Skills for driving Trailboss, the fleet manager for coding agents",
+  "version": "0.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/trailboss-ai/trailboss",
+  "repository": "https://github.com/trailboss-ai/trailboss-skills",
+  "author": {
+    "name": "Manas Talukdar",
+    "url": "https://github.com/trailboss-ai"
+  }
+}
