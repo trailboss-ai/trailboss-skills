@@ -20,10 +20,14 @@ Don't do a dispatched task's work yourself in parallel.
 
 ## Check on them
 
-`trailboss --json task ls`: each task's `state` (to do, working, needs you, ready, done), commits and files. Report in a short table, starting with what only the user can decide (`needs you`, `ready`).
+`trailboss --json task ls`: each task's `state` (to do, working, needs you, reviewing, ready, done), commits and files. Report in a short table, starting with what only the user can decide (`needs you`, `ready`).
+
+## Review (Trailboss 0.5 and later)
+
+A task added with `--review` (or with `tasks.review` on in the config) is `reviewing` instead of `ready`. Show the plan with `trailboss task review <n>`, then start it with `--yes` once the user agrees. A second agent, with none of the first one's context, reviews the diff in the task's worktree and writes notes without changing anything. `--agent NAME` picks the reviewer. Once the notes are written the task is `ready`, and `task show` includes them as `reviewer`. To have the task's agent act on them, use the `follow-up` skill.
 
 ## Accept
 
 1. `trailboss --json task show <n>`: read `summary`, `changed`, `checks` and `can_accept` / `accept_blocked`. Summarize them for the user.
-2. Merge only when the user says so: `trailboss task accept <n> --yes` (fast-forward only; refused when the checkout has uncommitted changes).
+2. Merge only when the user says so: `trailboss task accept <n> --yes` (fast-forward only; refused when the checkout has uncommitted changes, or, from 0.5, while the task is reviewing; never add `--force` unless the user asks).
 3. To drop a task: `trailboss task rm <n> --yes`. It keeps unmerged commits and uncommitted changes; never add `--force` unless the user asks.

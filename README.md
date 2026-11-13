@@ -8,6 +8,8 @@ Skills that teach coding agents to drive [Trailboss](https://github.com/trailbos
 | [`follow-up`](skills/follow-up/SKILL.md) | Send a running agent a self-contained message, now or when its turn ends (`send`, `queue`) |
 | [`until`](skills/until/SKILL.md) | Keep an agent going until a check passes, and steer the loop (`until`) |
 | [`checkpoints`](skills/checkpoints/SKILL.md) | Save, compare and restore an agent's folder (`checkpoint`) |
+| [`start`](skills/start/SKILL.md) | Start one agent from a definition in a folder as it is, outside a task (`start`) |
+| [`sweep`](skills/sweep/SKILL.md) | What the agents and tasks this session started are doing, their PRs and CI, and what needs you next (`sweep`) |
 
 Each one arrives with the Trailboss release that ships the commands it describes; these need Trailboss 0.4.
 
