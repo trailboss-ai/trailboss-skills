@@ -19,4 +19,4 @@ First run `trailboss version --json`. If it fails, or `version` is below 0.4 or 
 3. Watch: `trailboss --json until ls` (each loop's `state`, `round`, `last_passed`, `cost_usd`, and `log` for a detached one).
 4. Steer: `trailboss until pause|resume|stop <loop id|session|terminal>`. Use `all` only when the user says so.
 
-When it stops, report why (`stopped` and `reason` in the last `--json` line or the log): passed, a limit, the same failure with no changes, no progress, or the session ended. Don't start a second loop on the same session; Trailboss refuses it.
+When it stops, report why (`stopped` and `reason` in the last `--json` line or the log): passed, a limit, no progress, or the session ended. Don't start a second loop on the same session; Trailboss refuses it.
